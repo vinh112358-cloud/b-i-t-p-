@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoMega - Kho Phụ Tùng Số 1 & Spa Xe Công Nghệ Cao</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Icons from Feather/Lucide CDN for static usage -->
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container nav-container">
+            <div class="logo">Auto<span>Mega</span></div>
+            <nav class="nav-links">
+                <a href="#home" class="active">Trang Chủ</a>
+                <a href="#products">Sản Phẩm</a>
+                <a href="#services">Dịch Vụ</a>
+                <a href="#about">Về Chúng Tôi</a>
+            </nav>
+            <div class="user-actions">
+                <button class="btn btn-outline" id="b2b-login-btn">Đăng Nhập Đại Lý</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Tìm Phụ Tùng &<br>Chăm Sóc Xe Top 1</h1>
+                <p>Hệ sinh thái toàn diện cho xe xăng và xe điện. Cam kết hàng có sẵn, chính hãng và dịch vụ chuẩn 5 sao.</p>
+                
+                <!-- Smart Finder Tool -->
+                <div class="search-box">
+                    <input type="text" placeholder="Nhập VIN / Số Khung..." class="search-input">
+                    <input type="text" placeholder="Chọn Dòng Xe (e.g. Mazda 3)" class="search-input">
+                    <input type="number" placeholder="Năm SX (2020)" class="search-input">
+                    <button class="btn btn-primary" onclick="handleSearch()">
+                        <i data-feather="search" style="margin-right: 8px;"></i> Tìm Ngay
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Category Split -->
+    <section class="categories">
+        <div class="container">
+            <div class="category-grid">
+                <div class="category-card cat-gas">
+                    <h3>Phụ Tùng Xe Xăng</h3>
+                    <p>Động cơ, gầm, điện, vỏ cho các dòng xe truyền thống.</p>
+                </div>
+                <div class="category-card cat-ev">
+                    <h3>Đồ Chơi Xe Điện</h3>
+                    <p>Phụ kiện công nghệ, pin, phần mềm cho VinFast, Tesla.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Inventory / Products -->
+    <section id="products" class="inventory">
+        <div class="container">
+            <h2 class="section-title">Kho Hàng Online</h2>
+            <div id="product-list" class="inventory-grid">
+                <!-- Javascript will populate this -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Services / Booking -->
+    <section id="services" class="booking">
+        <div class="container">
+            <h2 class="section-title">Đặt Lịch Spa & Chăm Sóc</h2>
+            <div class="booking-form">
+                <div class="form-group">
+                    <label>Họ và Tên</label>
+                    <input type="text" class="form-control" placeholder="Nguyễn Văn A">
+                </div>
+                <div class="form-group">
+                    <label>Dịch Vụ Muốn Đặt</label>
+                    <select class="form-control">
+                        <option>Rửa Xe Chi Tiết</option>
+                        <option>Thay Dầu / Bảo Dưỡng Nhanh</option>
+                        <option>Độ Đèn / Âm Thanh</option>
+                        <option>Check Pin & Phần Mềm (EV)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Ngày Giờ Dự Kiến</label>
+                    <input type="datetime-local" class="form-control">
+                </div>
+                <button class="btn btn-primary" style="width: 100%;">Xác Nhận Đặt Lịch</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us (AI Content) -->
+    <section id="about" class="about">
+        <div class="container about-content">
+            <h2 class="section-title">Về AutoMega</h2>
+            <!-- AI Content Requirement: Proud, Powerful, Top 1 Supplier -->
+            <div class="about-text">
+                <p>
+                    Tại <strong>AutoMega</strong>, chúng tôi không chỉ bán phụ tùng – chúng tôi định hình chuẩn mực mới cho ngành công nghiệp ô tô tại thành phố này. Tự hào là <strong>trạm cung ứng số 1</strong> với quy mô kho vận khổng lồ, AutoMega sở hữu năng lực cung ứng vô song: từ những con ốc vít nhỏ nhất cho xe tải hạng nặng đến các module pin phức tạp cho xe điện đời mới. Không dòng xe nào làm khó được chúng tôi, không yêu cầu nào là quá lớn. 
+                </p>
+                <br>
+                <p>
+                    Chúng tôi là đối tác chiến lược của hàng trăm Garage và là điểm đến tin cậy của hàng ngàn chủ xe sành điệu. Với sự kết hợp hoàn hảo giữa kho hàng "khủng" luôn sẵn có và trung tâm Spa xe công nghệ cao, AutoMega cam kết mang lại tốc độ, sự chính xác và đẳng cấp phục vụ thượng thừa. Khi bạn cần giải pháp cho xế yêu, đừng tìm đâu xa – <strong>AutoMega có tất cả những gì bạn cần, ngay tại đây, ngay lúc này.</strong>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 AutoMega. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        feather.replace();
+    </script>
+</body>
+</html>
